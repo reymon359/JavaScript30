@@ -60,8 +60,7 @@
     <audio data-key="76" src="sounds/tink.wav"></audio>
 
     <script>
-        // We will listen to the event of the keys pressed
-        window.addEventListener('keydown', (e) => {
+        function playSound(e) {
             // We get the element that matches the key pressed
             const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
             const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
@@ -70,8 +69,7 @@
             audio.currentTime = 0; // We will rewind the audio
             audio.play();
             key.classList.add('playing');
-        })
-
+        }
 
         // Removes the transition effect 
         function removeTransition(e) {
@@ -79,10 +77,12 @@
             this.classList.remove('playing');
         }
 
-
         // Listening on each key for when the CSS transition ends
         const keys = document.querySelectorAll('.key');
         keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+        // We will listen to the event of the keys pressed
+        window.addEventListener('keydown', playSound);
     </script>
 
 
