@@ -79,12 +79,12 @@
         const secondHand = document.querySelector('.second-hand');
         const minsHand = document.querySelector('.min-hand');
         const hourHand = document.querySelector('.hour-hand');
-
+        document.querySelector('html').style.background = '#' + Math.floor(Math.random() * 16777215).toString(16);
 
 
         // We will calculate the date
         function setDate() {
-            document.querySelector('html').style.background = '#' + Math.floor(Math.random() * 16777215).toString(16);;
+
 
             const now = new Date();
 
