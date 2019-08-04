@@ -184,9 +184,18 @@
             return aLast > bLast ? 1 : -1;
         });
         console.log('alpha: ', alpha);
+
         // 8. Reduce Exercise
         // Sum up the instances of each of these
+        console.log("8. Reduce Exercise\nSum up the instances of each of these:\n['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck']")
+        console.log("const transportation = data.reduce((obj, item) => {\n    if (!obj[item]) obj[item] = 0;\n    obj[item]++;\n    return obj;\n}, {});")
         const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
+        const transportation = data.reduce((obj, item) => {
+            if (!obj[item]) obj[item] = 0;
+            obj[item]++;
+            return obj;
+        }, {});
+        console.log('transportation: ', transportation);
     </script>
     <style>
         body {
@@ -202,6 +211,8 @@
             background-color: darkcyan;
             color: #fff;
             max-width: 100%;
+            border-radius: 10px;
+            border: none;
         }
     </style>
 </body>
