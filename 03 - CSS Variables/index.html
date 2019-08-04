@@ -16,6 +16,10 @@
         <label for="blur">Blur:</label>
         <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
 
+        <label for="border-radius">Border Radius:</label>
+        <input id="border-radius" type="range" name="border-radius" min="0" max="100" value="10" data-sizing="%">
+
+
         <label for="base">Base Color</label>
         <input id="base" type="color" name="base" value="#ffc600">
     </div>
@@ -28,12 +32,14 @@
          :root {
             --base: #ffc600;
             --spacing: 10px;
+            --border-radius: 10px;
             --blur: 10px;
         }
         /* now we use those variables */
         
         img {
             padding: var(--spacing);
+            border-radius: var(--border-radius);
             background: var(--base);
             filter: blur(var(--blur));
         }
