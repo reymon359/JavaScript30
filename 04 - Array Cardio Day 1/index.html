@@ -8,10 +8,10 @@
 
 <body>
     <h1>Array Cardio 💪</h1>
-    <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
     <p>Get your shorts on - this is an array workout! </p>
     <b>Array Cardio Day 1</b>
-    <p>Some data we can work with</p>
+    <p>Some data we will work with</p>
+
     <textarea rows="29" cols="75" disabled> 
     const inventors = [
     { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
@@ -40,7 +40,8 @@
     'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 
     'Blair, Robert', 'Blair, Tony', 'Blake, William'];
     </textarea>
-    <p> <b>Array.prototype.filter()</b> 1. Filter the list of inventors for those who were born in the 1500's</p>
+    <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+
     <script>
         // Get your shorts on - this is an array workout!
         // ## Array Cardio Day 1
@@ -124,7 +125,10 @@
 
         // Array.prototype.filter()
         // 1. Filter the list of inventors for those who were born in the 1500's
-        const fifteen = inventors.filter(inventor => (invertor.year >= 1500 && inventor.year <= 1600));
+        console.log("Array.prototype.filter()\n1. Filter the list of inventors for those who were born in the 1500's")
+        console.log("const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year <= 1600));")
+        const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year <= 1600));
+        console.table(fifteen);
         // Array.prototype.map()
         // 2. Give us an array of the inventors' first and last names
 
