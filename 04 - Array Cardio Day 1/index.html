@@ -6,22 +6,37 @@
 </head>
 <body>
     <h1>Array Cardio 💪</h1>
-  <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
-  <p>So we have This 2 arrays</p>
-  <textarea rows="10" cols="70" disabled> 
-        <div [ngClass]="alert" class="alert" role="alert">
-          A simple primary alert—check it out!
-      </div>
-      
-      <button type="button" class="btn btn-info mr-3" (click)="alert = 'alert-info'">Info</button>
-      <button type="button" class="btn btn-success" (click)="alert = 'alert-success'">Success</button>
-      
-      <p [ngClass]="{'text-danger' : properties.danger, 'text-info': !properties.danger}">Hey I change with properties.danger</p>
-      
-      <button (click)="properties.danger = !properties.danger" type="button" name="button" class="btn btn-danger" [ngClass]="{'btn-danger': properties.danger, 'btn-info': !properties.danger}">
-      Change</button>
-      
-      </textarea>
+    <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+    <p>So we have This 2 arrays</p>
+    <textarea rows="30" cols="75" disabled> 
+    const inventors = [
+    { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
+    { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
+    { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
+    { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
+    { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
+    { first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
+    { first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
+    { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
+    { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
+    { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
+    { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
+    { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
+    ];
+
+    const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 
+    'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 
+    'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 
+    'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 
+    'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 
+    'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton',
+    'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi',
+    'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 
+    'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 
+    'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 
+    'Blair, Robert', 'Blair, Tony', 'Blake, William'];
+    
+    </textarea>
   <script>
     // Get your shorts on - this is an array workout!
     // ## Array Cardio Day 1
@@ -82,6 +97,16 @@
 
   </script>
   <style>
+
+    body {
+        text-align: center;
+        background: #08155f;
+        color: white;
+        font-family: 'helvetica neue', sans-serif;
+        /* font-weight: 100; */
+        /* font-size: 50px; */
+    }
+
     textarea {
         background-color: darkcyan;
         color: #fff;
