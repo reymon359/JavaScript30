@@ -147,7 +147,7 @@
         // Array.prototype.reduce()
         // 4. How many years did all the inventors live?
         console.log("Array.prototype.reduce()\n4. How many years did all the inventors live?");
-        console.log("const totalYears = inventors.reduce((total, inventor) => {\n    return total + (inventor.passed - inventor.year);\n}, 0);")
+        console.log("const totalYears = inventors.reduce((total, inventor) => {\n    return total + (inventor.passed - inventor.year);\n}, 0);");
         const totalYears = inventors.reduce((total, inventor) => {
             return total + (inventor.passed - inventor.year);
         }, 0);
@@ -155,7 +155,7 @@
 
         // 5. Sort the inventors by years lived
         console.log("5. Sort the inventors by years lived")
-        console.log("const oldest = inventors.sort((a, b) => {\n    const lastGuy = a.passed - a.year;\n    const nextGuy = b.passed - b.year;\n    return lastGuy > nextGuy ? -1 : 1;\n});")
+        console.log("const oldest = inventors.sort((a, b) => {\n    const lastGuy = a.passed - a.year;\n    const nextGuy = b.passed - b.year;\n    return lastGuy > nextGuy ? -1 : 1;\n});");
         const oldest = inventors.sort((a, b) => {
             const lastGuy = a.passed - a.year;
             const nextGuy = b.passed - b.year;
@@ -165,18 +165,25 @@
 
         // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
         // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-        console.log("6. create a list of Boulevards in Paris that contain 'de' anywhere in the name in\nhttps://en.wikipedia.org/wiki/Category:Boulevards_in_Paris")
-        console.log("const category = document.querySelector('.mv-category');\nconst links = Array.from(category.querySelectorAll('a'));\nconst de = links\n    .map(link => link.textContent)\n    .filter(streetName => streetName.includes('de'));")
-        const category = document.querySelector('.mv-category');
+        console.log("6. create a list of Boulevards in Paris that contain 'de' anywhere in the name in\nhttps://en.wikipedia.org/wiki/Category:Boulevards_in_Paris");
+        console.log("const category = document.querySelector('.mv-category');\nconst links = Array.from(category.querySelectorAll('a'));\nconst de = links\n    .map(link => link.textContent)\n    .filter(streetName => streetName.includes('de'));");
+        /*const category = document.querySelector('.mv-category');
         // Transforming nodelist in to array
         const links = Array.from(category.querySelectorAll('a'));
         const de = links
             .map(link => link.textContent)
-            .filter(streetName => streetName.includes('de'));
+            .filter(streetName => streetName.includes('de'));*/
 
         // 7. sort Exercise
         // Sort the people alphabetically by last name
-
+        console.log("7. sort Exercise\nSort the people alphabetically by last name");
+        console.log("const alpha = people.sort((lastOne, nextOne) => {\n    const [aLast, aFirst] = lastOne.split(', ');\n    const [bLast, bFirst] = nextOne.split(', ');\n    return aLast > bLast ? 1 : -1;\n});")
+        const alpha = people.sort((lastOne, nextOne) => {
+            const [aLast, aFirst] = lastOne.split(', ');
+            const [bLast, bFirst] = nextOne.split(', ');
+            return aLast > bLast ? 1 : -1;
+        });
+        console.log('alpha: ', alpha);
         // 8. Reduce Exercise
         // Sum up the instances of each of these
         const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
