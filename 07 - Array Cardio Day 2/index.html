@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Array Cardio 💪💪</title>
+    <meta charset="UTF-8">
+    <title>Array Cardio 💪💪</title>
 </head>
+
 <body>
     <h1>Array Cardio 💪💪</h1>
     <p>Get your shorts on - this is an array workout! </p>
@@ -25,44 +27,61 @@
     { text: 'Nice Nice Nice!', id: 542328 }
     ];
     </textarea>
-  <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
-  <script>
-    // ## Array Cardio Day 2
+    <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+    <script>
+        // ## Array Cardio Day 2
 
-    const people = [
-      { name: 'Wes', year: 1988 },
-      { name: 'Kait', year: 1986 },
-      { name: 'Irv', year: 1970 },
-      { name: 'Lux', year: 2015 }
-    ];
+        const people = [{
+            name: 'Wes',
+            year: 1988
+        }, {
+            name: 'Kait',
+            year: 1986
+        }, {
+            name: 'Irv',
+            year: 1970
+        }, {
+            name: 'Lux',
+            year: 2015
+        }];
 
-    const comments = [
-      { text: 'Love this!', id: 523423 },
-      { text: 'Super good', id: 823423 },
-      { text: 'You are the best', id: 2039842 },
-      { text: 'Ramen is my fav food ever', id: 123523 },
-      { text: 'Nice Nice Nice!', id: 542328 }
-    ];
+        const comments = [{
+            text: 'Love this!',
+            id: 523423
+        }, {
+            text: 'Super good',
+            id: 823423
+        }, {
+            text: 'You are the best',
+            id: 2039842
+        }, {
+            text: 'Ramen is my fav food ever',
+            id: 123523
+        }, {
+            text: 'Nice Nice Nice!',
+            id: 542328
+        }];
 
-    // Some and Every Checks
-    // Array.prototype.some() // is at least one person 19 or older?
-    // Array.prototype.every() // is everyone 19 or older?
+        // Some and Every Checks
+        // Array.prototype.some() // is at least one person 19 or older?
+        // Array.prototype.every() // is everyone 19 or older?
 
-    // Array.prototype.find()
-    // Find is like filter, but instead returns just the one you are looking for
-    // find the comment with the ID of 823423
+        // Array.prototype.find()
+        // Find is like filter, but instead returns just the one you are looking for
+        // find the comment with the ID of 823423
 
-    // Array.prototype.findIndex()
-    // Find the comment with this ID
-    // delete the comment with the ID of 823423
-
-  </script>
-      <style>
+        // Array.prototype.findIndex()
+        // Find the comment with this ID
+        // delete the comment with the ID of 823423
+    </script>
+    <style>
         body {
             text-align: center;
-            background: #08155f;
+            background: linear-gradient(230deg, rgba(13, 13, 13, 0.02) 0%, rgba(13, 13, 13, 0.02) 50%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.02) 100%), linear-gradient(44deg, rgba(191, 191, 191, 0.03) 0%, rgba(191, 191, 191, 0.03) 50%, rgba(20, 20, 20, 0.03) 50%, rgba(20, 20, 20, 0.03) 100%), linear-gradient(197deg, rgba(229, 229, 229, 0.03) 0%, rgba(229, 229, 229, 0.03) 50%, rgba(39, 39, 39, 0.03) 50%, rgba(39, 39, 39, 0.03) 100%), linear-gradient(352deg, rgba(160, 160, 160, 0.01) 0%, rgba(160, 160, 160, 0.01) 50%, rgba(98, 98, 98, 0.01) 50%, rgba(98, 98, 98, 0.01) 100%), linear-gradient(75deg, rgba(36, 36, 36, 0.03) 0%, rgba(36, 36, 36, 0.03) 50%, rgba(238, 238, 238, 0.03) 50%, rgba(238, 238, 238, 0.03) 100%), linear-gradient(188deg, rgba(59, 59, 59, 0.03) 0%, rgba(59, 59, 59, 0.03) 50%, rgba(163, 163, 163, 0.03) 50%, rgba(163, 163, 163, 0.03) 100%), linear-gradient(208deg, rgba(33, 33, 33, 0.03) 0%, rgba(33, 33, 33, 0.03) 50%, rgba(160, 160, 160, 0.03) 50%, rgba(160, 160, 160, 0.03) 100%), linear-gradient(331deg, rgba(92, 92, 92, 0.02) 0%, rgba(92, 92, 92, 0.02) 50%, rgba(6, 6, 6, 0.02) 50%, rgba(6, 6, 6, 0.02) 100%), linear-gradient(290deg, rgba(16, 16, 16, 0.02) 0%, rgba(16, 16, 16, 0.02) 50%, rgba(163, 163, 163, 0.02) 50%, rgba(163, 163, 163, 0.02) 100%), linear-gradient(90deg, rgb(76, 21, 98), rgb(166, 10, 148));
             color: white;
             font-family: 'helvetica neue', sans-serif;
+            height: 100vh;
+            overflow-y: hidden;
         }
         
         textarea {
@@ -74,4 +93,5 @@
         }
     </style>
 </body>
+
 </html>
