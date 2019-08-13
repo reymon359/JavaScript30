@@ -13,6 +13,12 @@ html {
     box-sizing: inherit;
 }
 
+h1 {
+    color: #EFEFEF;
+    font-weight: 400;
+    text-align: center;
+}
+
 input {
     width: 100%;
     padding: 20px;
@@ -73,5 +79,5 @@ span.population {
 }
 
 .hl {
-    background: #ffc600;
+    background: #00ff37;
 }
