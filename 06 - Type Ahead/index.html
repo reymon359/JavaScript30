@@ -25,7 +25,16 @@
         fetch(endpoint)
             .then(blob => blob.json())
             // To push them individually we spred them
-            .then(data => cities.push(...data))
+            .then(data => cities.push(...data));
+
+        function findMatches(wordToMatch, cities) {
+            return cities.filter(place => {
+                // Here we figure if the word matches a city or state
+                // gi stands for global and insensitive
+                const regex = new RegExp(wordToMatch, 'gi');
+                return place.city.match(regex) || place.state.match(regex)
+            })
+        }
     </script>
 </body>
 
