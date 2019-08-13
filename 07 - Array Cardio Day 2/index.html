@@ -62,12 +62,20 @@
             id: 542328
         }];
 
-        // Some and Every Checks
+        // 
+        console.log("Some and Every Checks")
+
         // Array.prototype.some() // is at least one person 19 or older?
+        console.log("Array.prototype.some()\nis at least one person 19 or older?")
+        console.log("const isAdult = people.some((person) => (new Date().getFullYear()) - person.year >= 19);")
         const isAdult = people.some((person) => (new Date().getFullYear()) - person.year >= 19);
-        console.log({isAdult});
+        console.log('isAdult: ', isAdult);
 
         // Array.prototype.every() // is everyone 19 or older?
+        console.log("Array.prototype.every()\nis everyone 19 or older?")
+        console.log("const allAdult = people.every((person) => (new Date().getFullYear()) - person.year >= 19);");
+        const allAdult = people.every((person) => (new Date().getFullYear()) - person.year >= 19);
+        console.log('allAdult: ', allAdult);
 
         // Array.prototype.find()
         // Find is like filter, but instead returns just the one you are looking for
