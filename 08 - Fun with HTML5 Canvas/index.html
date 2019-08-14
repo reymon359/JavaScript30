@@ -12,6 +12,13 @@
         // First we select the canvas
         const canvas = document.querySelector('#draw');
         const ctx = canvas.getContext('2d');
+        // Resizing it
+        canvas.width = window.innerWidth;
+        canvas.heigth = window.innerHeight;
+        // Now we define the line specs
+        ctx.strokeStyle = '#BADA55';
+        ctx.lineJoin = 'round';
+        ctx.lineCap = 'round';
     </script>
 
     <style>
