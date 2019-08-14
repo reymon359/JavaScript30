@@ -22,6 +22,11 @@
         ctx.lineWidth = 10;
         // ctx.globalCompositeOperation = 'multiply';
         // https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
+
+        ctx.font = "50px Arial";
+        ctx.fillText("Draw on me!😄", window.innerWidth / 2.5, window.innerHeight / 2);
+
+
         let isDrawing = false;
         let lastX = 0;
         let lastY = 0;
@@ -29,6 +34,7 @@
         let direction = true;
 
         function draw(e) {
+
             // Stop the function from running when they are not moused down
             if (!isDrawing) return;
             console.log(e);
