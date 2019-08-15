@@ -7,7 +7,18 @@
 </head>
 
 <body>
-
+    <style>
+        html,
+        body {
+            margin: 0;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(0, rgba(153, 232, 51, 0.37) 0%, rgba(153, 232, 51, 0.37) 20%, rgba(129, 180, 50, 0.37) 20%, rgba(129, 180, 50, 0.37) 40%, rgba(104, 128, 49, 0.37) 40%, rgba(104, 128, 49, 0.37) 60%, rgba(80, 76, 48, 0.37) 60%, rgba(80, 76, 48, 0.37) 80%, rgba(55, 24, 47, 0.37) 80%, rgba(55, 24, 47, 0.37) 100%), linear-gradient(90deg, rgb(125, 196, 198) 0%, rgb(125, 196, 198) 20%, rgb(114, 148, 197) 20%, rgb(114, 148, 197) 40%, rgb(102, 101, 196) 40%, rgb(102, 101, 196) 60%, rgb(91, 53, 194) 60%, rgb(91, 53, 194) 80%, rgb(79, 5, 193) 80%, rgb(79, 5, 193) 100%);
+            height: 100%;
+            color: white;
+        }
+    </style>
+    <h1>Open the console</h1>
     <p onClick="makeGreen()">×BREAK×DOWN×</p>
 
     <script>
@@ -24,6 +35,8 @@
             p.style.color = '#BADA55';
             p.style.fontSize = '50px';
         }
+        // clearing
+        console.clear();
 
         // Regular
         console.log('Hello');
@@ -49,18 +62,48 @@
 
         console.assert(p.classList.contains('ouch'), 'That is wrong!');
 
-        // clearing
-        console.clear();
+
 
         // Viewing DOM Elements
         console.log(p);
-
+        console.dir(p);
 
         // Grouping together
+        dogs.forEach(dog => {
+            console.group(`${dog.name}`);
+            // console.groupCollapsed(`${dog.name}`);
+            console.log(`This is ${dog.name}`);
+            console.log(`${dog.name} is ${dog.age} years old`);
+            console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+            console.groupEnd(`${dog.name}`);
+        });
 
         // counting
 
+        console.count('Hi');
+        console.count('Hi');
+        console.count('Bye');
+        console.count('Bye');
+        console.count('Hi');
+        console.count('Bye');
+        console.count('Hi');
+        console.count('Bye');
+        console.count('Bye');
+        console.count('Bye');
+        console.count('Bye');
+        console.count('Bye');
+
         // timing
+        console.time('fetching data');
+        fetch('https://api.github.com/users/reymon359')
+            .then(data => data.json())
+            .then(data => {
+                console.timeEnd('fetching data');
+                console.log(data);
+            });
+
+        // table
+        console.table(dogs);
     </script>
 </body>
 
