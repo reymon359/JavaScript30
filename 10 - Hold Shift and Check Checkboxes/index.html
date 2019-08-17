@@ -30,6 +30,21 @@
             color: white;
             font-size: 1.2em;
             box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            transition: all .3s;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            color: #0b8dcc;
+            background-color: #dcf0fa;
+            padding: 12px;
+        }
+        
+        button:focus {
+            outline: 0;
         }
         
         .inbox {
@@ -115,9 +130,7 @@
             <p>Don't forget to tweet your result!</p>
         </div> -->
     </div>
-    <div style="text-align: center;">
-        <button onclick="addCheckbox()">add another checkbox</button>
-    </div>
+    <button onclick="addCheckbox()">add another checkbox</button>
 
     <script>
         // We select the checkboxes
