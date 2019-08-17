@@ -105,6 +105,7 @@
         </div> -->
     </div>
 
+    <button onclick="addCheckbox()">add another checkbox</button>
     <script>
         // We select the checkboxes
         const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
@@ -128,14 +129,32 @@
                         checkbox.checked = true;
                     }
                 });
-
             }
-
             lastChecked = this;
         }
 
 
         checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck))
+
+        function makeRandomId(length) {
+            var result = '';
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            var charactersLength = characters.length;
+            for (var i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
+        }
+
+
+        function addCheckbox() {
+            let randomText = makeRandomId(Math.floor(Math.random() * 15) + 1);
+            let node = document.createElement('div');
+            node.setAttribute('class', 'item');
+            html = `<input type="checkbox"><p>${randomText}</p>`;
+            node.innerHTML = html;
+            document.querySelector('.inbox').appendChild(node);
+        }
     </script>
 </body>
 
