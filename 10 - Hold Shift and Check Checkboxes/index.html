@@ -108,7 +108,7 @@
     <button onclick="addCheckbox()">add another checkbox</button>
     <script>
         // We select the checkboxes
-        const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+        let checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
         console.log(checkboxes);
 
         let lastChecked;
@@ -134,7 +134,7 @@
         }
 
 
-        checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck))
+        checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
 
         function makeRandomId(length) {
             var result = '';
@@ -154,6 +154,9 @@
             html = `<input type="checkbox"><p>${randomText}</p>`;
             node.innerHTML = html;
             document.querySelector('.inbox').appendChild(node);
+            checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+            checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+            console.log(checkboxes);
         }
     </script>
 </body>
