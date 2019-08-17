@@ -21,6 +21,17 @@
             color: white;
         }
         
+        button {
+            padding: 10px;
+            border: nonde;
+            border: none;
+            border-radius: 5px;
+            background-color: #0b8dcc;
+            color: white;
+            font-size: 1.2em;
+            box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+        }
+        
         .inbox {
             max-width: 400px;
             margin: 50px auto;
@@ -104,8 +115,10 @@
             <p>Don't forget to tweet your result!</p>
         </div> -->
     </div>
+    <div style="text-align: center;">
+        <button onclick="addCheckbox()">add another checkbox</button>
+    </div>
 
-    <button onclick="addCheckbox()">add another checkbox</button>
     <script>
         // We select the checkboxes
         let checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
