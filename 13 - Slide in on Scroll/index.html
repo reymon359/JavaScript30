@@ -89,6 +89,7 @@
     </div>
 
     <script>
+        // To reduce the number of times the checkSlide is called
         function debounce(func, wait = 20, immediate = true) {
             var timeout;
             return function() {
@@ -109,12 +110,19 @@
         const sliderImages = document.querySelectorAll('.slide-in');
 
         // Check slide function
-        function checkSlide(e) {
+        function checkSlide() {
             sliderImages.forEach(sliderImage => {
+                // half way through the image
                 const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
-                console.log(slideInAt);
-
-
+                // bottom of the image
+                const imageBottom = sliderImage.offsetTop + sliderImage.height;
+                const isHalfShown = slideInAt > sliderImage.offsetTop;
+                const isNotScrolledPast = window.scrollY < imageBottom;
+                if (isHalfShown && isNotScrolledPast) {
+                    sliderImage.classList.add('active');
+                } else {
+                    sliderImage.classList.remove('active');
+                }
             });
         }
 
@@ -124,7 +132,7 @@
     <style>
         html {
             box-sizing: border-box;
-            background: #ffc600;
+            background: linear-gradient(0, rgba(189, 205, 225, 0.5) 0%, rgba(189, 205, 225, 0.5) 3%, rgba(163, 183, 210, 0.5) 3%, rgba(163, 183, 210, 0.5) 23%, rgba(137, 162, 196, 0.5) 23%, rgba(137, 162, 196, 0.5) 28%, rgba(111, 140, 181, 0.5) 28%, rgba(111, 140, 181, 0.5) 54%, rgba(85, 119, 167, 0.5) 54%, rgba(85, 119, 167, 0.5) 73%, rgba(59, 97, 152, 0.5) 73%, rgba(59, 97, 152, 0.5) 80%, rgba(33, 76, 138, 0.5) 80%, rgba(33, 76, 138, 0.5) 85%, rgba(7, 54, 123, 0.5) 85%, rgba(7, 54, 123, 0.5) 100%), linear-gradient(90deg, rgb(38, 57, 138) 0%, rgb(38, 57, 138) 11%, rgb(54, 81, 152) 11%, rgb(54, 81, 152) 14%, rgb(71, 105, 166) 14%, rgb(71, 105, 166) 27%, rgb(87, 129, 180) 27%, rgb(87, 129, 180) 32%, rgb(103, 152, 193) 32%, rgb(103, 152, 193) 49%, rgb(119, 176, 207) 49%, rgb(119, 176, 207) 51%, rgb(136, 200, 221) 51%, rgb(136, 200, 221) 89%, rgb(152, 224, 235) 89%, rgb(152, 224, 235) 100%);
             font-family: 'helvetica neue';
             font-size: 20px;
             font-weight: 200;
