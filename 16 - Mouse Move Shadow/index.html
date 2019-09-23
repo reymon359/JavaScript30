@@ -7,6 +7,7 @@
 </head>
 
 <body>
+    <h2>Mouse over</h2>
 
     <div class="hero">
         <h1 contenteditable>🔥WOAH!</h1>
@@ -20,6 +21,7 @@
         
         body {
             margin: 0;
+            background: linear-gradient(135deg, rgb(16, 52, 222) 0%, rgb(16, 52, 222) 6%, rgb(41, 77, 223) 6%, rgb(41, 77, 223) 18%, rgb(67, 103, 224) 18%, rgb(67, 103, 224) 30%, rgb(92, 128, 225) 30%, rgb(92, 128, 225) 31%, rgb(117, 153, 227) 31%, rgb(117, 153, 227) 37%, rgb(142, 178, 228) 37%, rgb(142, 178, 228) 41%, rgb(168, 204, 229) 41%, rgb(168, 204, 229) 69%, rgb(193, 229, 230) 69%, rgb(193, 229, 230) 100%);
         }
         
         .hero {
@@ -34,6 +36,12 @@
             text-shadow: 10px 10px 0 rgba(0, 0, 0, 1);
             font-size: 100px;
         }
+        
+        h2 {
+            color: white;
+            text-align: center;
+            font-size: 40px;
+        }
     </style>
 
     <script>
@@ -42,12 +50,18 @@
         const walk = 500; // 500px
 
         function shadow(e) {
-            const { offsetWidth: width, offsetHeight: height } = hero;
-            let { offsetX: x, offsetY: y } = e;
+            const {
+                offsetWidth: width,
+                offsetHeight: height
+            } = hero;
+            let {
+                offsetX: x,
+                offsetY: y
+            } = e;
 
             if (this !== e.target) {
-            x = x + e.target.offsetLeft;
-            y = y + e.target.offsetTop;
+                x = x + e.target.offsetLeft;
+                y = y + e.target.offsetTop;
             }
 
             const xWalk = Math.round((x / width * walk) - (walk / 2));
