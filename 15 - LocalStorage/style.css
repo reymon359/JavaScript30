@@ -67,7 +67,7 @@ h2 {
 }
 
 .plates input:checked+label:before {
-    content: '🌮';
+    content: '🍲';
 }
 
 .add-items {
