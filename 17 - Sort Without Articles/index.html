@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sort Without Articles</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: url("https://images.unsplash.com/photo-1455793067932-146d5b4a694f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80");
+            background-size: cover;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        h3 {
+            font-weight: 400;
+            font-size: 3em;
+            text-align: center;
+            color: white;
+            width: 100%;
+        }
+        
+        #bands {
+            list-style: inside square;
+            font-size: 20px;
+            background: white;
+            width: 500px;
+            margin: auto;
+            padding: 0;
+            box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 50px;
+        }
+        
+        #bands li {
+            border-bottom: 1px solid #efefef;
+            padding: 20px;
+        }
+        
+        #bands li:last-child {
+            border-bottom: 0;
+        }
+        
+        a {
+            color: #ffc600;
+            text-decoration: none;
+        }
+    </style>
+    <h3>Sort Without Articles <br>
+        <small>Open the console to see the original list</small></h3>
+    <ul id="bands"></ul>
+
+    <script>
+        const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+        console.log(bands);
+
+        function strip(bandName) {
+            return bandName.replace(/^(a |the |an )/i, '').trim();
+        }
+
+        const sortedBands = bands.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
+
+        document.querySelector('#bands').innerHTML =
+            sortedBands
+            .map(band => `<li>${band}</li>`)
+            .join('');
+    </script>
+
+</body>
+
+</html>
