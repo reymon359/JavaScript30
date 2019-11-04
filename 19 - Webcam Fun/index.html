@@ -6,38 +6,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<h1>photobooth</h1>
 <div class="photobooth">
+
     <div class="controls">
         <!--        <button onClick="takePhoto()">Take Photo</button>-->
-        <a href="#" onClick="takePhoto()" class="action-button shadow animate blue">Take Photo</a>
-        <a href="#" onClick="redEffectBoolean = !redEffectBoolean" class="action-button shadow animate red">Red
+        <a  onClick="redEffectBoolean = !redEffectBoolean" class="action-button shadow animate red">Red
             Effect</a>
+        <a  onClick="rgbSplitBoolean = !rgbSplitBoolean"
+           class="action-button shadow animate yellow">
+            RGB Split</a>
+        <a  onClick="takePhoto()" class="action-button shadow animate blue">Take Photo</a>
         <div class="alphaContainer">
-            <label for="alpha">Alpha</label>
+            <label for="alpha">Alpha Level</label>
             <input type="number" value="1" min="0.05" max=1 step="0.05" name="alpha">
         </div>
 
 
         <div class="rgb">
+            <p>Green Screen</p>
             <label for="rmin">Red Min:</label>
-            <input type="range" min=0 max=255 name="rmin">
+            <input type="range" min=0 max=255 name="rmin" value=255>
             <label for="rmax">Red Max:</label>
-            <input type="range" min=0 max=255 name="rmax">
+            <input type="range" min=0 max=255 name="rmax" value=255>
 
             <br>
 
             <label for="gmin">Green Min:</label>
-            <input type="range" min=0 max=255 name="gmin">
+            <input type="range" min=0 max=255 name="gmin" value=255>
             <label for="gmax">Green Max:</label>
-            <input type="range" min=0 max=255 name="gmax">
+            <input type="range" min=0 max=255 name="gmax" value=255>
 
             <br>
 
             <label for="bmin">Blue Min:</label>
-            <input type="range" min=0 max=255 name="bmin">
+            <input type="range" min=0 max=255 name="bmin" value=255>
             <label for="bmax">Blue Max:</label>
-            <input type="range" min=0 max=255 name="bmax">
+            <input type="range" min=0 max=255 name="bmax" value=255>
         </div>
     </div>
 
@@ -51,4 +56,5 @@
 <script src="scripts.js"></script>
 
 </body>
+<script src="https://cdn.jsdelivr.net/gh/reymon359/web-experiments/Social%20Signature/socialsignature.min.js" crossorigin="anonymous"></script>
 </html>

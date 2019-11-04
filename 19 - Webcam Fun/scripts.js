@@ -43,7 +43,7 @@ function paintToCanvas() {
         if (redEffectBoolean) {
             pixels = redEffect(pixels);
         }
-        if (redEffectBoolean) {
+        if (rgbSplitBoolean) {
             pixels = rgbSplit(pixels);
         }
         ctx.globalAlpha = alphaNumber.value;
