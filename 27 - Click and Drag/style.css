@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background: url('https://source.unsplash.com/NFs6dRTBgaM/2000x2000') fixed;
+  background: repeating-linear-gradient(0deg, hsla(54,0%,88%,0.05) 0px, hsla(54,0%,88%,0.05) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(45deg, hsla(54,0%,88%,0.05) 0px, hsla(54,0%,88%,0.05) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(90deg, hsla(54,0%,88%,0.05) 0px, hsla(54,0%,88%,0.05) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(90deg, hsla(54,0%,88%,0.05) 0px, hsla(54,0%,88%,0.05) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(67.5deg, hsla(54,0%,88%,0.05) 0px, hsla(54,0%,88%,0.05) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(157.5deg, hsla(54,0%,88%,0.05) 0px, hsla(54,0%,88%,0.05) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(157.5deg, hsla(54,0%,88%,0.05) 0px, hsla(54,0%,88%,0.05) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(67.5deg, hsla(54,0%,88%,0.05) 0px, hsla(54,0%,88%,0.05) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(45deg, hsla(54,0%,88%,0.05) 0px, hsla(54,0%,88%,0.05) 1px,transparent 1px, transparent 16px),linear-gradient(90deg, hsl(224,72%,31%),hsl(224,72%,31%));
   background-size: cover;
 }
 
@@ -10,20 +10,24 @@ html {
 
 body {
   min-height: 100vh;
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
   font-size: 20px;
   margin: 0;
 }
-
+h2{
+  width: 100%;
+  text-align: center;
+  color: white;
+}
 .items {
   height: 800px;
   padding: 100px;
   width: 100%;
-  border: 1px solid white;
-  overflow-x: scroll;
+  /*border: 1px solid white;*/
+  overflow-x: hidden;
   overflow-y: hidden;
   white-space: nowrap;
   user-select: none;
