@@ -1,17 +1,21 @@
 body {
-  margin: 0;
-  display: flex;
+  /*margin: 0;*/
+  /*display: flex;*/
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #4C4C4C url('https://unsplash.it/1500/900?image=1021');
+  background: repeating-linear-gradient(90deg, rgb(177, 19, 31) 0px, rgb(177, 19, 31) 63px,rgb(189, 27, 25) 63px, rgb(189, 27, 25) 133px,rgb(227, 49, 7) 133px, rgb(227, 49, 7) 227px,rgb(202, 34, 19) 227px, rgb(202, 34, 19) 298px,rgb(164, 12, 37) 298px, rgb(164, 12, 37) 363px,rgb(214, 42, 13) 363px, rgb(214, 42, 13) 434px);
   background-size: cover;
   font-family: sans-serif;
 }
-
+h2{
+  width: 100%;
+  text-align: center;
+  color: white;
+}
 .wrapper {
   width: 850px;
-  display: flex;
+  display: flex;margin: auto;
 }
 
 video {
