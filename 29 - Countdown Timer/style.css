@@ -1,9 +1,9 @@
 html {
   box-sizing: border-box;
   font-size: 10px;
+  height: 100vh;
   background: #8E24AA;
-  background: linear-gradient(45deg,  #42a5f5 0%,#478ed1 50%,#0d47a1 100%);
-}
+  background: radial-gradient(circle at 75% 23%, rgba(226, 226, 226,0.05) 0%, rgba(226, 226, 226,0.05) 50%,rgba(11, 11, 11,0.05) 50%, rgba(11, 11, 11,0.05) 100%),radial-gradient(circle at 75% 51%, rgba(168, 168, 168,0.05) 0%, rgba(168, 168, 168,0.05) 50%,rgba(75, 75, 75,0.05) 50%, rgba(75, 75, 75,0.05) 100%),radial-gradient(circle at 38% 11%, rgba(31, 31, 31,0.05) 0%, rgba(31, 31, 31,0.05) 50%,rgba(254, 254, 254,0.05) 50%, rgba(254, 254, 254,0.05) 100%),linear-gradient(114deg, rgb(5, 95, 166),rgb(114, 125, 230));}
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -14,7 +14,12 @@ body {
   text-align: center;
   font-family: 'Inconsolata', monospace;
 }
-
+h2{
+  color: white;
+  text-align: center;
+  font-size: 8rem;
+  margin: 0.5rem, ;
+}
 .display__time-left {
   font-weight: 100;
   font-size: 20rem;
@@ -25,7 +30,7 @@ body {
 
 .timer {
   display: flex;
-  min-height: 100vh;
+  min-height: 80vh;
   flex-direction: column;
 }
 
