@@ -1,69 +1,94 @@
 html {
-  box-sizing: border-box;
-  font-size: 10px;
-  background: #ffc600;
+    box-sizing: border-box;
+    font-size: 10px;
+    height: 100vh;
+    background: linear-gradient(124deg, rgba(232, 252, 33, 0.46) 0%, rgba(232, 252, 33, 0.46) 14.286%, rgba(196, 218, 49, 0.46) 14.286%, rgba(196, 218, 49, 0.46) 28.572%, rgba(161, 185, 64, 0.46) 28.572%, rgba(161, 185, 64, 0.46) 42.858%, rgba(125, 151, 80, 0.46) 42.858%, rgba(125, 151, 80, 0.46) 57.144%, rgba(89, 117, 96, 0.46) 57.144%, rgba(89, 117, 96, 0.46) 71.43%, rgba(54, 84, 111, 0.46) 71.43%, rgba(54, 84, 111, 0.46) 85.716%, rgba(18, 50, 127, 0.46) 85.716%, rgba(18, 50, 127, 0.46) 100.002%), linear-gradient(316deg, rgb(248, 151, 43) 0%, rgb(248, 151, 43) 14.286%, rgb(246, 132, 46) 14.286%, rgb(246, 132, 46) 28.572%, rgb(243, 113, 49) 28.572%, rgb(243, 113, 49) 42.858%, rgb(241, 94, 52) 42.858%, rgb(241, 94, 52) 57.144%, rgb(239, 75, 55) 57.144%, rgb(239, 75, 55) 71.43%, rgb(236, 56, 58) 71.43%, rgb(236, 56, 58) 85.716%, rgb(234, 37, 61) 85.716%, rgb(234, 37, 61) 100.002%);
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Amatic SC', cursive;
+    padding: 0;
+    margin: 0;
+    font-family: 'Amatic SC', cursive;
 }
 
 h1 {
-  text-align: center;
-  font-size: 10rem;
-  line-height: 1;
-  margin-bottom: 0;
+    text-align: center;
+    font-size: 10rem;
+    line-height: 1;
+    margin-bottom: 0;
 }
 
+.buttons {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: center;
+}
+
+#startButton {
+    margin: auto;
+    font-family: 'Amatic SC', cursive;
+    outline: none;
+    cursor: pointer;
+    width: 10rem;
+    height: 4rem;
+    border-radius: 5px;
+    box-shadow: white 0px 0px 7px 1px;
+    color: #000000;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: .3rem;
+}
+
+}
 .score {
-  background: rgba(255,255,255,0.2);
-  padding: 0 3rem;
-  line-height: 1;
-  border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0 3rem;
+    line-height: 1;
+    border-radius: 1rem;
 }
 
 .game {
-  width: 600px;
-  height: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
+    max-width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
 }
 
 .hole {
-  flex: 1 0 33.33%;
-  overflow: hidden;
-  position: relative;
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
 }
 
 .hole:after {
-  display: block;
-  background: url(dirt.svg) bottom center no-repeat;
-  background-size: contain;
-  content: '';
-  width: 100%;
-  height:70px;
-  position: absolute;
-  z-index: 2;
-  bottom: -30px;
+    display: block;
+    background: url(dirt.svg) bottom center no-repeat;
+    background-size: contain;
+    content: '';
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
 }
 
 .mole {
-  background: url('mole.svg') bottom center no-repeat;
-  background-size: 60%;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  height: 100%;
-  transition:all 0.4s;
+    background: url('mole.svg') bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
 }
 
 .hole.up .mole {
-  top: 0;
+    top: 0;
 }
