@@ -25,7 +25,7 @@ h1 {
 .buttons {
     display: flex;
     align-items: center;
-    padding: 2rem;
+    padding: 6rem;
     justify-content: center;
 }
 
@@ -44,7 +44,6 @@ h1 {
     letter-spacing: .3rem;
 }
 
-}
 .score {
     background: rgba(255, 255, 255, 0.2);
     padding: 0 3rem;
@@ -76,7 +75,7 @@ h1 {
     height: 70px;
     position: absolute;
     z-index: 2;
-    bottom: -30px;
+    bottom: -25px;
 }
 
 .mole {
