@@ -5,7 +5,7 @@
     <title>Understanding JavaScript's Capture</title>
 </head>
 <body class="bod">
-
+<h1>Event Capture, Propagation, Bubbling and Once, <small>open the console and click the squares</small></h1>
 <div class="one">
     <div class="two">
         <div class="three">
@@ -26,7 +26,10 @@
         width: 100%;
         padding: 100px;
     }
-
+    button{
+        margin: 30px;
+        padding: 20px;
+    }
     .one {
         background: thistle;
     }
@@ -40,7 +43,7 @@
     }
 </style>
 
-<button></button>
+<button>Click me!, if you want</button>
 <script>
     const divs = document.querySelectorAll('div');
     const button = document.querySelector('button');
@@ -64,6 +67,5 @@
 
 </script>
 </body>
-<script src="https://cdn.jsdelivr.net/gh/reymon359/web-experiments/Social%20Signature/socialsignature.min.js" crossorigin="anonymous"></script>
 
 </html>
