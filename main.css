@@ -27,7 +27,7 @@ body {
     color: var(--dark-color);
     margin: 0;
     transition: background-color 1.5s;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 body.loaded {
