@@ -37,7 +37,8 @@ function loadProjects() {
         else html += `  <div onmouseenter="cardMouseEnter(event)" onmousemove="cardMouseMove(event)" onmouseleave="cardMouseLeave(event)" class="card-wrap">`;
 
         html += `      <div class="card" >`;
-        html += `          <div class="card-bg" style="background-image: url('images/01 - JavaScript Drum Kit.png');"></div>`;
+        let backgroundImageUrl = `images/${project}.png`;
+        html += `          <div class="card-bg" style="background-image: url('${backgroundImageUrl}');"></div>`;
         html += `          <div class="card-info">`;
         html += `              <h1>${project}</h1>`;
 
