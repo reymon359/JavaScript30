@@ -5,6 +5,33 @@
     <title>Videos</title>
 </head>
 <body>
+<h1>Adding Up Times with Reduce</h1>
+<p>We will add all the video below the code timestamps together.</p>
+<p>Here is the code</p>
+
+<textarea rows="29" cols="75" disabled>
+
+    const timeNodes = Array.from(document.querySelectorAll('[data-time]'));
+
+    const seconds = timeNodes
+        .map(node => node.dataset.time)
+        .map(timeCode => {
+            const [mins, secs] = timeCode.split(':').map(parseFloat);
+            return (mins * 60) + secs;
+        })
+        .reduce((total, vidSeconds) => total + vidSeconds);
+
+    let secondsLeft = seconds;
+    const hours = Math.floor(secondsLeft / 3600);
+    secondsLeft = secondsLeft % 3600;
+
+    const mins = Math.floor(secondsLeft / 60);
+    secondsLeft = secondsLeft % 60;
+
+    console.log(hours, mins, secondsLeft);
+
+    </textarea>
+<p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
 <ul class="videos">
     <li data-time="5:43">
         Video 1
@@ -203,6 +230,22 @@
     console.log(hours, mins, secondsLeft);
 
 </script>
+<style>
+    body {
+        text-align: center;
+        background:linear-gradient(45deg, rgba(179, 43, 116,0.2) 0%, rgba(179, 43, 116,0.2) 16.667%,rgba(222, 167, 127,0.2) 16.667%, rgba(222, 167, 127,0.2) 33.334%,rgba(236, 208, 131,0.2) 33.334%, rgba(236, 208, 131,0.2) 50.001%,rgba(165, 2, 112,0.2) 50.001%, rgba(165, 2, 112,0.2) 66.668%,rgba(208, 126, 123,0.2) 66.668%, rgba(208, 126, 123,0.2) 83.335%,rgba(193, 84, 120,0.2) 83.335%, rgba(193, 84, 120,0.2) 100.002%),linear-gradient(22.5deg, rgba(179, 43, 116,0.2) 0%, rgba(179, 43, 116,0.2) 16.667%,rgba(222, 167, 127,0.2) 16.667%, rgba(222, 167, 127,0.2) 33.334%,rgba(236, 208, 131,0.2) 33.334%, rgba(236, 208, 131,0.2) 50.001%,rgba(165, 2, 112,0.2) 50.001%, rgba(165, 2, 112,0.2) 66.668%,rgba(208, 126, 123,0.2) 66.668%, rgba(208, 126, 123,0.2) 83.335%,rgba(193, 84, 120,0.2) 83.335%, rgba(193, 84, 120,0.2) 100.002%),linear-gradient(0deg, rgba(179, 43, 116,0.2) 0%, rgba(179, 43, 116,0.2) 16.667%,rgba(222, 167, 127,0.2) 16.667%, rgba(222, 167, 127,0.2) 33.334%,rgba(236, 208, 131,0.2) 33.334%, rgba(236, 208, 131,0.2) 50.001%,rgba(165, 2, 112,0.2) 50.001%, rgba(165, 2, 112,0.2) 66.668%,rgba(208, 126, 123,0.2) 66.668%, rgba(208, 126, 123,0.2) 83.335%,rgba(193, 84, 120,0.2) 83.335%, rgba(193, 84, 120,0.2) 100.002%),linear-gradient(90deg, rgb(190, 190, 190),rgb(16, 16, 16));
+        color: white;
+        font-family: 'helvetica neue', sans-serif;
+    }
+
+    textarea {
+        background-color: darkcyan;
+        color: #fff;
+        max-width: 100%;
+        border-radius: 10px;
+        border: none;
+    }
+</style>
 </body>
 </html>
 <script src="https://cdn.jsdelivr.net/gh/reymon359/web-experiments/Social%20Signature/socialsignature.min.js" crossorigin="anonymous"></script>
