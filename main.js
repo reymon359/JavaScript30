@@ -32,9 +32,7 @@ function loadProjects() {
     projects.forEach((project) => {
 
         // Card header
-        // If the browser is not chrome we disable the events
-        if (!(!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime))) html += `  <div class="card-wrap">`;
-        else html += `  <div onmouseenter="cardMouseEnter(event)" onmousemove="cardMouseMove(event)" onmouseleave="cardMouseLeave(event)" class="card-wrap">`;
+        html += `  <div onmouseenter="cardMouseEnter(event)" onmousemove="cardMouseMove(event)" onmouseleave="cardMouseLeave(event)" class="card-wrap">`;
 
         html += `      <div class="card" >`;
         let backgroundImageUrl = `images/${project}.png`;
